@@ -1,0 +1,799 @@
+/* Basic Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa; /* Light gray background for sections */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-light {
+    background-color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #1F2937; /* Darker text for titles */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: #3B71FE;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #2563EB;
+}
+
+.btn-light {
+    background-color: #fff;
+    color: #3B71FE;
+}
+
+.btn-light:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    color: #3B71FE;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #E0E7FF; /* Light blue for tags */
+    color: #3B71FE;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin: 3px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3B71FE;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #3B71FE;
+    border-bottom: 2px solid #3B71FE;
+}
+
+/* Hero Section (existing - no changes needed here for this request) */
+.hero-section {
+    background: linear-gradient(135deg, #3B71FE 0%, #60A5FA 100%); /* Blue gradient */
+    color: #fff;
+    padding: 160px 0 100px; /* Adjust padding for fixed navbar */
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styling for the circle that will contain the image */
+.cse-circle {
+    /* ---- Example existing styles you MIGHT have ---- */
+    width: 120px; /* Or whatever size you want */
+    height: 120px; /* Should be same as width for a perfect circle */
+    border-radius: 50%; /* Makes it a circle */
+    background-color: #fff; /* Example background, adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Important to clip the image to the circle's bounds */
+    /* You might have other styles like box-shadow, border, etc. */
+    /* Remove any text-specific styles like font-size, color (for text) if they were here */
+}
+
+/* **** NEW/MODIFIED CSS for the image itself **** */
+.cse-circle img {
+    width: 100%;     /* Make the image fill the width of the circle */
+    height: 100%;    /* Make the image fill the height of the circle */
+    object-fit: cover; /* This will ensure the image covers the area,
+                          potentially cropping parts of it if aspect ratios differ.
+                          Use 'contain' if you want to see the whole image,
+                          which might leave some empty space in the circle. */
+    /* If your image isn't already circular and you want to force it: */
+    /* border-radius: 50%; */ /* Usually not needed if overflow:hidden on parent is set
+                                 and object-fit:cover is used on a non-transparent image,
+                                 but can be useful if the image has transparency or
+                                 you use object-fit: contain with a non-circular image. */
+}
+
+
+
+.hero-graphic {
+    position: relative; /* Often useful for positioning child elements like the badge */
+    /* ... any other styles for hero-graphic ... */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    flex-basis: 60%;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-text .subheading {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.hero-text p:not(.subheading) {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-buttons .btn {
+    margin-right: 15px;
+}
+
+.hero-graphic {
+    flex-basis: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cse-circle {
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #3B71FE;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.iot-badge {
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    background-color: #3B71FE;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+}
+
+/* About Me Section */
+.about-content {
+    display: flex;
+    gap: 30px;
+}
+
+.about-card {
+    flex: 1;
+}
+
+.about-card h3 {
+    font-size: 1.5rem;
+    color: #3B71FE;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.strengths-grid, .hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.strength-item, .hobby-item {
+    background-color: #EFF6FF; /* Very light blue */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #3B71FE;
+    font-weight: 500;
+}
+.strength-item i, .hobby-item i {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+
+/* Education Section */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #3B71FE;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-dot {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -8px; /* For odd items */
+    background-color: white;
+    border: 4px solid #3B71FE;
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -8px; /* For even items */
+}
+
+.timeline-content {
+    position: relative;
+}
+
+.timeline-content h4 {
+    color: #3B71FE;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+.timeline-content p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 3px;
+}
+.timeline-content strong {
+    color: #1F2937;
+}
+
+/* Skills Section */
+.skills-content {
+    display: flex;
+    gap: 30px;
+}
+
+.skills-card {
+    flex: 1;
+}
+.skills-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #3B71FE;
+}
+.skills-card h3 i {
+    margin-right: 10px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+.skill p {
+    margin-bottom: 5px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+.skill-percentage {
+    font-size: 0.9em;
+    color: #555;
+}
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+}
+.progress-bar {
+    height: 10px;
+    background-color: #3B71FE;
+    border-radius: 5px;
+}
+.skills-tools-db {
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.tool-tags .tag {
+    margin-bottom: 8px;
+}
+
+/* Certifications Section */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.certification-card {
+    text-align: center;
+}
+.certification-icon {
+    font-size: 2.5rem;
+    color: #3B71FE;
+    margin-bottom: 15px;
+}
+.certification-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #1F2937;
+}
+.certification-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+.view-profile-link {
+    font-size: 0.9rem;
+    color: #3B71FE;
+    text-decoration: none;
+    font-weight: 500;
+}
+.view-profile-link:hover {
+    text-decoration: underline;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff; /* Assuming cards have a background */
+    border-radius: 8px;   /* Assuming cards have rounded corners */
+    padding: 25px;        /* Assuming cards have padding */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Example shadow */
+}
+.project-card-header {
+    height: 150px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -25px -25px 20px -25px; /* Extend to card edges, adjust if card padding changes */
+}
+.project-card-header i {
+    font-size: 3rem;
+    color: #fff;
+}
+.project-bg-1 { background: linear-gradient(135deg, #3B71FE, #60A5FA); }
+.project-bg-2 { background: linear-gradient(135deg, #EC4899, #F472B6); } /* Pink/Purple */
+.project-bg-3 { background: linear-gradient(135deg, #10B981, #34D399); } /* Green */
+
+.project-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #1F2937;
+}
+.project-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+    flex-grow: 1; /* Makes description take available space */
+}
+/* Ensure the last actual paragraph (not tech-used-label or button) still uses flex-grow */
+.project-card p:not(.tech-used-label) {
+    flex-grow: 1;
+}
+/* If only one p, it will take space. If multiple, the one before tech-label should */
+.project-card p:nth-last-of-type(3) { /* Adjust if more elements are between description and tech-label */
+    flex-grow: 1;
+}
+
+
+.tech-used-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px !important; /* Override general p margin */
+    flex-grow: 0 !important; /* This should not grow */
+}
+.tech-tags {
+    margin-bottom: 20px; /* Space before the button */
+    flex-grow: 0; /* This should not grow */
+}
+
+/* General Button Styling (NEW) */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    border: none; /* Remove default anchor border if any */
+}
+
+/* Project Button Specifics */
+.project-btn {
+    background-color: #3B71FE; /* Example: Use a primary color or theme color */
+    color: #fff;
+    align-self: flex-start; /* Align button to the start if card content not full */
+    margin-top: auto; /* Push button to bottom of the flex container */
+}
+
+.project-btn:hover {
+    background-color: #305cc9; /* Darker shade on hover */
+}
+
+/* --- Card Structure Adjustments for Button --- */
+/* Ensure the last content paragraph before tech labels/tags/button gets the flex-grow */
+/* This is a bit tricky with the current structure if the number of p tags varies widely.
+   A more robust way would be to wrap the main content (h4, description p) in a div
+   and give that div flex-grow: 1.
+   For now, let's ensure the p tags are handled:
+*/
+.project-card > h4 + p { /* The first p after h4 is likely the description */
+    flex-grow: 1;
+}
+.project-card > .tech-used-label,
+.project-card > .tech-tags,
+.project-card > .project-btn {
+    flex-grow: 0; /* These elements should not grow */
+}
+
+
+/* Achievements Section */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.achievement-card {
+    text-align: left; /* Align text left for lists */
+}
+.achievement-icon {
+    font-size: 2rem;
+    color: #fff;
+    background-color: #3B71FE;
+    padding: 12px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    display: inline-block; /* To apply padding and bg */
+}
+.achievement-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #1F2937;
+}
+.achievement-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+.achievement-card li {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+.achievement-card li i {
+    color: #3B71FE;
+    margin-right: 10px;
+    margin-top: 4px; /* Align with text */
+}
+
+/* Contact Section */
+.contact-content {
+    display: flex;
+    gap: 30px;
+    padding: 0; /* Remove card padding to use internal padding */
+    overflow: hidden; /* For rounded corners with internal divs */
+}
+.contact-info {
+    background-color: #3B71FE;
+    color: #fff;
+    padding: 40px;
+    flex-basis: 40%;
+    border-radius: 10px 0 0 10px;
+}
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.contact-info p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+.contact-info ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+.contact-info li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+.contact-info li i {
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: opacity 0.3s ease;
+}
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+.contact-form {
+    padding: 40px;
+    flex-basis: 60%;
+}
+.contact-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #1F2937;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 0.9rem;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+}
+.form-group textarea {
+    resize: vertical;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3B71FE;
+    box-shadow: 0 0 0 2px rgba(59, 113, 254, 0.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #1F2937; /* Dark background for footer */
+    color: #A0AEC0; /* Lighter text for footer */
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        margin-bottom: 40px;
+    }
+    .hero-graphic {
+        margin-top: 30px;
+    }
+    .iot-badge {
+        right: 50%;
+        transform: translateX(50%);
+        top: -20px; /* Adjust if needed */
+    }
+    .skills-content {
+        flex-direction: column;
+    }
+    .skills-tools-db {
+        flex-direction: row; /* Stack horizontally on medium screens */
+    }
+    .skills-tools-db .card {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .nav-links {
+        /* Basic mobile menu - could be improved with JS for toggle */
+        display: none; /* Or implement a burger menu */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+    /* Add a class 'show-mobile-menu' via JS to display .nav-links */
+
+    .about-content {
+        flex-direction: column;
+    }
+    .timeline::after {
+        left: 20px; /* Adjust timeline line for smaller screens */
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px; /* Space for dot */
+        padding-right: 10px;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0%;
+    }
+    .timeline-dot {
+        left: 12px; /* Consistent position for dot */
+    }
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-info {
+        border-radius: 10px 10px 0 0;
+    }
+    .contact-form {
+        border-radius: 0 0 10px 10px;
+    }
+    .skills-tools-db {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .hero-text .subheading {
+        font-size: 1.2rem;
+    }
+    .cse-circle {
+        width: 180px;
+        height: 180px;
+        font-size: 3.5rem;
+    }
+    .projects-grid, .certifications-grid, .achievements-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}

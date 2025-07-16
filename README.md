@@ -27,8 +27,6 @@ Build Portfolio from the source and install dependencies:
    npm install
    ```
 
----
-
 ## 🚀 Usage
 
 Run the project with:
@@ -38,8 +36,6 @@ Using **npm**:
 ```bash
 npm start
 ```
-
----
 
 ## ✅ Testing
 
@@ -51,9 +47,6 @@ Using **npm**:
 npm test
 ```
 
-```
-
----
 
 ### 🔧 Optional:
 - Replace `{test_framework}` with whatever you’re using (like Jest or Mocha).

@@ -3,25 +3,6 @@
 This is the source code for my personal portfolio website. It highlights my skills, projects, certifications, and contact details. The website is responsive and includes visual elements like videos and images to make it more engaging.
 
 
-````markdown
-# PORTFOLIO
-
-*Showcase Your Brilliance, Inspire Future Opportunities*
-
-![GitHub last commit](https://img.shields.io/github/last-commit/Karumuri-shivani/Portfolio?color=gray&label=last%20commit) 
-![Commit month](https://img.shields.io/badge/month-june-blue) 
-![HTML](https://img.shields.io/badge/html-47.5%25-blueviolet) 
-![Languages](https://img.shields.io/badge/languages-3-lightgrey)
-
----
-
-**Built with the tools and technologies:**
-
-![Markdown](https://img.shields.io/badge/-Markdown-black?logo=markdown&logoColor=white)
-![JavaScript](https://img.shields.io/badge/-JavaScript-yellow?logo=javascript&logoColor=black)
-
----
-
 ## 📦 Installation
 
 Build Portfolio from the source and install dependencies:

@@ -4,345 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="shiva.css">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
 </head>
-<body>
+<body style="background-color: azure;">
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="nav-logo">Portfolio</a>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-<header id="home" class="hero-section">
-    <div class="container hero-content">
-        <div class="hero-text">
-            <h1>Shivani Karumuri</h1>
-            <p class="subheading">B.Tech in Computer Science & Engineering (IoT)</p>
-            <p>Passionate about leveraging IoT and cloud technologies to create innovative solutions</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-light">Contact Me</a>
-                <a href="#projects" class="btn btn-outline">View Projects</a>
-            </div>
-        </div>
-        <div class="hero-graphic">
-            <div class="cse-circle">
-                <!-- **** MODIFICATION HERE **** -->
-                <img src="./Shivani_formals.png" alt="CSE Logo">
-                <!-- **** END MODIFICATION **** -->
-            </div>
-    
+    <section class="hero" id="home">
+    <div class="hero-content">
+        <h2>Shivani Karumuri</h2>
+        <p>B.Tech in Computer Science & Engineering (IoT)</p>
+        <p>Passionate about leveraging IoT and cloud technologies to create innovative solutions</p>
+        <div class="buttons">
+            <button>Contact Me</button>
+            <button>View Projects</button>
         </div>
     </div>
-</header>
-
-    <!-- About Me Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="card about-card">
-                    <h3>Career Objective</h3>
-                    <p>To contribute effectively to a dynamic organization by leveraging my skills and adaptability, while continuously learning and growing in a professional environment.</p>
-                    <h3>Personal Strengths</h3>
-                    <div class="strengths-grid">
-                        <div class="strength-item"><i class="fas fa-bullseye"></i> Determined</div>
-                        <div class="strength-item"><i class="fas fa-crosshairs"></i> Focused</div>
-                        <div class="strength-item"><i class="fas fa-users"></i> Team Management</div>
-                        <div class="strength-item"><i class="fas fa-briefcase"></i> Strong Work Ethics</div>
-                        <div class="strength-item"><i class="fas fa-lightbulb"></i> Creative Skills</div>
-                        <div class="strength-item"><i class="fas fa-clipboard-list"></i> Organised</div>
-                    </div>
-                </div>
-                <div class="card about-card">
-                    <h3>Hobbies & Interests</h3>
-                    <div class="hobbies-grid">
-                        <div class="hobby-item"><i class="fas fa-plane"></i> Travelling</div>
-                        <div class="hobby-item"><i class="fas fa-coins"></i> Collecting Coins</div>
-                        <div class="hobby-item"><i class="fas fa-seedling"></i> Planting Saplings</div>
-                        <div class="hobby-item"><i class="fas fa-bicycle"></i> Cycling</div>
-                        <div class="hobby-item"><i class="fas fa-pencil-alt"></i> Sketching</div>
-                        <div class="hobby-item"><i class="fas fa-gamepad"></i> Playing</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section section-light">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content card">
-                        <h4>B. Tech (CSE in Internet of Things)</h4>
-                        <p>VNR VJIET, JNTUH</p>
-                        <p>2022 - 2026 (Pursuing 6th Sem)</p>
-                        <p><strong>7.96 CGPA</strong></p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content card">
-                        <h4>Intermediate</h4>
-                        <p>Narayana Junior College</p>
-                        <p>Board of Intermediate Edu., 2020 - 2022</p>
-                        <p><strong>98%</strong></p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content card">
-                        <h4>High School</h4>
-                        <p>Pallavi Model School</p>
-                        <p>CBSE, 2008 - 2020</p>
-                        <p><strong>92.4%</strong></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-content">
-                <div class="card skills-card">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skill">
-                        <p>C <span class="skill-percentage">85%</span></p>
-                        <div class="progress-bar-container"><div class="progress-bar" style="width: 85%;"></div></div>
-                    </div>
-                    <div class="skill">
-                        <p>Java <span class="skill-percentage">80%</span></p>
-                        <div class="progress-bar-container"><div class="progress-bar" style="width: 80%;"></div></div>
-                    </div>
-                    <div class="skill">
-                        <p>Python <span class="skill-percentage">90%</span></p>
-                        <div class="progress-bar-container"><div class="progress-bar" style="width: 90%;"></div></div>
-                    </div>
-                    <div class="skill">
-                        <p>HTML/CSS <span class="skill-percentage">85%</span></p>
-                        <div class="progress-bar-container"><div class="progress-bar" style="width: 85%;"></div></div>
-                    </div>
-                    <div class="skill">
-                        <p>JavaScript <span class="skill-percentage">75%</span></p>
-                        <div class="progress-bar-container"><div class="progress-bar" style="width: 75%;"></div></div>
-                    </div>
-                </div>
-                <div class="skills-tools-db">
-                    <div class="card skills-card">
-                        <h3><i class="fas fa-wrench"></i> Software Tools</h3>
-                        <div class="tool-tags">
-                            <span class="tag">AWS</span>
-                            <span class="tag">Canva</span>
-                        </div>
-                    </div>
-                    <div class="card skills-card">
-                        <h3><i class="fas fa-database"></i> Databases</h3>
-                        <div class="tool-tags">
-                            <span class="tag">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="section section-light">
-        <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="certifications-grid">
-                <div class="card certification-card">
-                    <i class="fas fa-robot certification-icon"></i>
-                    <h4>Line following Car, IoT Workshop</h4>
-                    <p>Using ESP32 and NodeMCU conducted by Convergence</p>
-                </div>
-                <div class="card certification-card">
-                    <i class="fas fa-cloud certification-icon"></i>
-                    <h4>NPTEL Certification on Cloud Computing</h4>
-                    <p>National Programme on Technology Enhanced Learning</p>
-                </div>
-                <div class="card certification-card">
-                    <i class="fas fa-satellite-dish certification-icon"></i>
-                    <h4>Remote Sensing and Digital Image Analysis</h4>
-                    <p>Issued by ISRO</p>
-                </div>
-                <div class="card certification-card">
-                    <i class="fas fa-brain certification-icon"></i>
-                    <h4>Career Essentials in Generative AI</h4>
-                    <p>Issued by LinkedIn and Microsoft</p>
-                </div>
-                <div class="card certification-card">
-                    <i class="fas fa-code certification-icon"></i>
-                    <h4>Postman API Fundamentals</h4>
-                    <p>Issued by Postman</p>
-                </div>
-                <div class="card certification-card">
-                    <i class="fas fa-cloud-upload-alt certification-icon"></i>
-                    <h4>Generative AI by Google Cloud</h4>
-                    <p>45-hour course covering 24 skill badges in Beginner, Intermediate, and Advanced levels</p>
-                    <a href="#" class="view-profile-link">View Profile</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   <!-- Projects Section -->
-<section id="projects" class="section">
-    <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <div class="card project-card">
-                <div class="project-card-header project-bg-1">
-                    <i class="fas fa-fire"></i>
-                </div>
-                <h4>Calories Burnt Prediction</h4>
-                <p>Developed a machine learning model to predict calories burnt during workouts based on biological parameters.</p>
-                <p class="tech-used-label">Technologies Used:</p>
-                <div class="tech-tags">
-                    <span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span>
-                    <span class="tag">Seaborn</span><span class="tag">Scikit-learn</span><span class="tag">XGBoost</span>
-                </div>
-                <!-- Optional: Add a button if you have a link for this project -->
-                <!-- <a href="#" target="_blank" rel="noopener noreferrer" class="btn project-btn">View Project</a> -->
-            </div>
-            <div class="card project-card">
-                <div class="project-card-header project-bg-2">
-                    <i class="fas fa-bug"></i> <!-- Using bug for butterfly -->
-                </div>
-                <h4>Butterfly Classification</h4>
-                <!-- MODIFIED: Updated description -->
-                <p>Developed a deep learning model to classify butterfly species based on input images using CNN architecture. Our research paper on this project was published in IJCSIS (International Journal of Computer Science and Information Security, ISSN: 1947-5500).</p>
-                <p class="tech-used-label">Technologies Used:</p>
-                <div class="tech-tags">
-                    <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Torchvision</span>
-                    <span class="tag">NumPy</span><span class="tag">Pandas</span><span class="tag">Streamlit</span>
-                </div>
-                <!-- ADDED: Journal Button -->
-                <a href="https://www.academia.edu/129127476/CLASSIFICATION_OF_BUTTERFLIES_USING_DEEP_LEARNING" target="_blank" rel="noopener noreferrer" class="btn project-btn">View Journal</a>
-            </div>
-            <div class="card project-card">
-                <div class="project-card-header project-bg-3">
-                    <i class="fas fa-microchip"></i>
-                </div>
-                <h4>LED Chaser System</h4>
-                <p>Built an LED chaser system that controls LED sequences using Raspberry Pi 3 with integrated sensors.</p>
-                <p class="tech-used-label">Technologies Used:</p>
-                <div class="tech-tags">
-                    <span class="tag">Raspberry Pi 3</span><span class="tag">Python</span>
-                    <span class="tag">Ultrasonic Sensor</span><span class="tag">Buzzer</span>
-                </div>
-                 <!-- Optional: Add a button if you have a link for this project -->
-                <!-- <a href="#" target="_blank" rel="noopener noreferrer" class="btn project-btn">View Code</a> -->
-            </div>
-        </div>
-    </div>
+    <img src="./Shivani_formals.png" alt="My Photo" class="hero-photo">
 </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="section section-light">
-        <div class="container">
-            <h2 class="section-title">Achievements</h2>
-            <div class="achievements-grid">
-                <div class="card achievement-card">
-                    <i class="fas fa-graduation-cap achievement-icon"></i>
-                    <h4>Academic</h4>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Scored 98% in Intermediate Board Examinations</li>
-                        <li><i class="fas fa-check-circle"></i> Secured 4164 rank in Telangana State EAMCET examination</li>
-                    </ul>
-                </div>
-                <div class="card achievement-card">
-                    <i class="fas fa-medal achievement-icon"></i>
-                    <h4>Co-Curricular</h4>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Participated in a 10-day AWS and DevOps workshop by CoursVita</li>
-                        <li><i class="fas fa-check-circle"></i> Participating in Google Cloud Arcade (January - July 2025 season)</li>
-                        <li><i class="fas fa-check-circle"></i> Participated in Webathon conducted by the ACM Student Chapter, VNR VJIET</li>
-                        <li><i class="fas fa-check-circle"></i> Participant in Smart India Hackathon (SIH) 2022</li>
-                    </ul>
-                </div>
-                <div class="card achievement-card">
-                    <i class="fas fa-palette achievement-icon"></i> <!-- Using palette for arts/design -->
-                    <h4>Extra-Curricular</h4>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Graphic designer for VNR Vignana Jyothi Sahithi Vanam (Telugu club)</li>
-                    </ul>
-                </div>
+    <section id="about">
+        <h3>About Me</h3>
+        <div class="flex-box">
+            <div class="card">
+                <h4>Career Objective</h4>
+                <p>To contribute effectively to a dynamic organization by leveraging my skills and adaptability, while continuously learning and growing in a professional environment.</p>
+                <h5>Personal Strengths</h5>
+                <ul class="boxed-list">
+                    <li>Determined</li>
+                    <li>Focused</li>
+                    <li>Team Management</li>
+                    <li>Strong Work Ethics</li>
+                    <li>Creative Skills</li>
+                    <li>Organised</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Hobbies & Interests</h4>
+                <ul class="boxed-list">
+                    <li>Travelling</li>
+                    <li>Collecting Coins</li>
+                    <li>Planting Saplings</li>
+                    <li>Cycling</li>
+                    <li>Sketching</li>
+                    <li>Playing</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content card">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p>Feel free to reach out to me for any opportunities or collaborations.</p>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> karumurishivani04@email.com</li>
-                        <li><i class="fas fa-phone"></i> +91 9951004463</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana, India</li>
-                    </ul>
-                    <h3>Connect with me</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/karumuri-shivani-388b342a2/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Karumuri-shivani" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <section id="education">
+        <h3>Education</h3>
+        <div class="flex-box">
+            <div class="card">
+                <h4>B.Tech (CSE in IoT)</h4>
+                <p>VNR VJIET, JNTUH<br>2022 – 2026<br>7.96 CGPA</p>
+            </div>
+            <div class="card">
+                <h4>Intermediate</h4>
+                <p>Narayana Junior College<br>2020 – 2022<br>98%</p>
+            </div>
+            <div class="card">
+                <h4>High School</h4>
+                <p>Pallavi Model School<br>2008 – 2020<br>92.4%</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h3>Technical Skills</h3>
+        <div class="flex-box">
+            <div class="card">
+                <h4>Programming Languages</h4>
+                <p>C - 85%</p>
+                <div class="skills-bar"><div style="width:85%"></div></div>
+                <p>Java - 80%</p>
+                <div class="skills-bar"><div style="width:80%"></div></div>
+                <p>Python - 90%</p>
+                <div class="skills-bar"><div style="width:90%"></div></div>
+                <p>HTML/CSS - 85%</p>
+                <div class="skills-bar"><div style="width:85%"></div></div>
+                <p>JavaScript - 75%</p>
+                <div class="skills-bar"><div style="width:75%"></div></div>
+            </div>
+            <div class="card">
+                <h4>Software Tools</h4>
+                <p>AWS, Canva</p>
+                <h4>Databases</h4>
+                <p>MongoDB</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h3>Projects</h3>
+        <div class="flex-box">
+            <div class="card">
+                <h4>Calories Burnt Prediction</h4>
+                <p>Developed a machine learning model to predict calories burnt during workouts based on biological parameters.</p>
+                <p><strong>Technologies:</strong> Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, XGBoost</p>
+            </div>
+            <div class="card">
+                <h4>Butterfly Classification</h4>
+                <p>Developed a deep learning model to classify butterfly species based on input images using CNN architecture.</p>
+                <p><strong>Technologies:</strong> Python, PyTorch, Torchvision, Pandas, Streamlit</p>
+            </div>
+            <div class="card">
+                <h4>LED Chaser System</h4>
+                <p>Built an LED chaser system that controls LED sequences using Raspberry Pi 3 with integrated sensors.</p>
+                <p><strong>Technologies:</strong> Raspberry Pi 3, Python, Ultrasonic Sensor, Buzzer</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h3>Achievements</h3>
+        <div class="flex-box">
+            <div class="card">
+                <h4>Academic</h4>
+                <p>Scored 98% in Intermediate Board Examinations<br>4164th rank in Telangana EAMCET</p>
+            </div>
+            <div class="card">
+                <h4>Co-Curricular</h4>
+                <p>Completed AWS & DevOps workshop<br>Participated in Google Cloud Arcade (2025)<br>Webathon & SIH participation</p>
+            </div>
+            <div class="card">
+                <h4>Extra-Curricular</h4>
+                <p>Graphic designer for Telugu club</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h3>Get In Touch</h3>
+        <div class="flex-box">
+            <div class="card contact-info">
+                <p>Email: karumurishivani04@gmail.com</p>
+                <p>Phone: +91 9951004463</p>
+                <p>Location: Hyderabad, Telangana, India</p>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/karumuri-shivani-388b342a2/">LinkedIn</a>
+                    <a href="https://github.com/Karumuri-shivani">GitHub</a>
                     
-                    </div>
                 </div>
-                <form class="contact-form" action="https://formspree.io/f/xkgbgkwr" method="POST">
-                    <h3>Send a Message</h3>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+            </div>
+            <div class="card contact-form">
+                <input type="text" placeholder="Name" style="width:100%; margin-bottom:10px; padding:10px">
+                <input type="email" placeholder="Email" style="width:100%; margin-bottom:10px; padding:10px">
+                <input type="text" placeholder="Subject" style="width:100%; margin-bottom:10px; padding:10px">
+                <textarea placeholder="Message" rows="4" style="width:100%; margin-bottom:10px; padding:10px"></textarea>
+                <button style="width:100%; padding:10px; background:#3b82f6; color:white; border:none; border-radius:5px">Send Message</button>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2025 Shivani Karumuri. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>&copy; 2025 Portfolio. All rights reserved.</p>
     </footer>
-
-    <script src="shiva.js"></script>
 </body>
 </html>
